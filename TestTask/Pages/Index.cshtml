@@ -1,0 +1,45 @@
+﻿@page
+@{
+    ViewData["Title"] = "Home Page";
+}
+@section Scripts{
+    <script src="~/js/script.js" asp-append-version="true"></script>
+}
+
+
+    <div class="title">
+        Имеющиеся сокращенные ссылки:
+    </div>
+    <div class="wrapper">
+        <div class="modal-wrapper">
+            <form class="modal-content">
+                <button class="btn-close-modal">×</button>
+                <input class="oldLongUrl" name="oldLongUrl" type="url" readonly />
+                <label>
+                    Изменить короткую ссылку?
+                    <select class="changeShortUrl" name="changeShortUrl">
+                        <option value="true">Да</option>
+                        <option value="false">Нет</option>
+                    </select>
+                </label>
+                <label>
+                    Обнулить счётчик?
+                    <select class="resetCounter" name="resetCounter">
+                        <option value="true">Да</option>
+                        <option value="false">Нет</option>
+                    </select>
+                </label>
+                <input name="newLongUrl" type="url" placeholder="Новая ссылка" required />
+                <p>Новая длина короткой ссылки</p>
+                <select class="newShortUrlLength" name="newShortUrlLength">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                </select>
+                <button class="btn-edit-submit">Редактировать</button>
+            </form>
+        </div>
+        <div class="table-header table">
+            <span>Оригинальная ссылка</span><span>Короткая ссылка</span><span>Счётчик переходов</span><span>Дата создания</span><span>Удалить ссылку</span><span>Редактировать ссылку</span>
+        </div>
+        <div class="btn-add-link"><a href="./ConfiguratePage">Перейти к добавлению своей ссылки</a></div>
+    </div>

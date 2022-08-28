@@ -1,0 +1,24 @@
+﻿@page
+@model TestTask.Pages.ConfiguratePageModel
+@section Scripts{
+    <script src="~/js/generateLink.js" asp-append-version="true"></script>
+}
+    <div class="wrapper container">
+        <h1>Генератор ссылок</h1>
+        <form id="form">
+            <input type="url" placeholder="Введите ссылку" name="longUrl" class="long-link" />
+            <div>
+                Выберите количество знаков:
+                <select name="length">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-generate">Cгенерировать ссылку</button>
+        </form>
+        <p>Текст сгенерированной ссылки:</p>
+        <a class="short-link" href="#">example</a>
+        <p class="help-text">Нажми ещё раз "Сгенерировать ссылку" чтобы изменить её вид</p>
+        <button class="btn-save-link" disabled>Сохранить ссылку</button>
+    </div>
+    <div class="btn-add-link"><a href="./">Перейти к списку ссылок</a></div>
